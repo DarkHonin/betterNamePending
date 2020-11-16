@@ -1,0 +1,78 @@
+{"components" :[
+    {
+
+        "title" : "Page Title",
+        "type" : "group",
+        "id" : "fonts_controll_group",
+        "children" : [
+            {
+                "id" : "page_title_font",
+                "type" : "font",
+                "tag" : ".page.title, .page.title.font",
+                "title" : "Select Title Font",
+                "fonts" : [
+                    "'Libre Baskerville', serif",
+                    "'Raleway', sans-serif",
+                    "'EB Garamond', serif"
+                ]
+            },
+            {
+                "id" : "page_title_color",
+                "type" : "color",
+                "tag" : ".page.title, .page.title.color",
+                "title" : "Select Title Color",
+                "colors" : [
+                    "#000000",
+                    "#FFFFFF",
+                    "#0000FF",
+                    "#0011FF",
+                    "#FF1111"
+                ]
+            }, {
+                "id" : "page_title_background_color",
+                "type" : "color",
+                "tag" : ".page.title, .page.title.color",
+                "title" : "Select Title Color",
+                "rule" : "background-color",
+                "colors" : [
+                    "#000000",
+                    "#FFFFFF",
+                    "#0000FF",
+                    "#0011FF",
+                    "#FF1111"
+                ]
+            }
+        ]
+    },
+    {
+        "title" : "Page Subtitle",
+        "type" : "group",
+        "children" : [
+            {
+                "id" : "page_subtitle_font",
+                "type" : "font",
+                "tag" : ".subtitle, .subtitle.font",
+                "title" : "Select Subtitle Font",
+                "fonts" : [
+                    "'Libre Baskerville', serif",
+                    "'Raleway', sans-serif",
+                    "'EB Garamond', serif"
+                ]
+            },
+            {
+                "id" : "page_title_color",
+                "type" : "color",
+                
+                "tag" : ".subtitle, .subtitle.color",
+                "title" : "Select Title Color",
+                "colors" : [
+                    "#000000",
+                    "#FFFFFF",
+                    "#0000FF",
+                    "#0011FF",
+                    "#FF1111"
+                ]
+            }
+        ]
+    }
+]}

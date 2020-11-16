@@ -1,0 +1,32 @@
+#debug {
+  white-space: nowrap;
+  position: fixed;
+  max-width: 300px;
+  height: 100vh;
+  z-index: 99;
+  border-right: 1px solid black;
+}
+
+#debug_panel {
+  position: relative;
+  overflow: visible;
+  z-index: 99;
+  width: min-content;
+}
+#debug_panel .main {
+  transition: width 0.2s;
+  background-color: white;
+  width: 0px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#debug_panel .main > * {
+  padding: 0.2em;
+}
+#debug_panel .main h2 {
+  margin-top: 0px;
+}
+#debug_panel .main.open {
+  width: 300px;
+}

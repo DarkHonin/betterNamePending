@@ -1,0 +1,32 @@
+#mainToggle {
+  position: absolute;
+  top: 0px;
+}
+
+.toggle.open + .toggle.btn {
+  left: unset;
+  right: 0%;
+  background-color: grey;
+}
+
+.toggle.btn {
+  width: 25px;
+  height: 25px;
+  background-color: darkgrey;
+  display: inline-flex;
+  float: right;
+}
+.toggle.btn i {
+  display: block;
+  margin: auto;
+  font-size: 0.5em;
+}
+
+.toggle.body.vert {
+  max-height: 0px;
+  overflow-y: hidden;
+}
+
+.toggle.body.vert.open {
+  max-height: 100%;
+}

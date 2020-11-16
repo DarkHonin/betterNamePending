@@ -1,12 +1,7 @@
 // const { faGrinTongueSquint } = require("@fortawesome/free-solid-svg-icons");
 
-var c = 0;
-
-
-
-
-import Toggle from './debuger/toggle.js'
-import CustomGroup from './debuger/customGroup.js'
+import Toggle from './components/toggle.js'
+import CustomGroup from './components/customGroup.js'
 
 const json_fetch = (url) => fetch(url, {headers : { 
     'Content-Type': 'application/json',
@@ -14,10 +9,10 @@ const json_fetch = (url) => fetch(url, {headers : {
    }}).then(e => Object(e.json()), ((Err) => console.log(Err)))
 
 
-const debugPanel = json_fetch("/javascript/assets/debug.json");
-debugPanel.then(e => {const DEBUG_STRUCT = e;return DEBUG_STRUCT;})
+const config = json_fetch("./config.json");
+config.then(e => {const DEBUG_STRUCT = e;return DEBUG_STRUCT;})
 
-class Debug extends React.Component{
+class RootPanel extends React.Component{
 
     state = {
         components :[
@@ -39,9 +34,9 @@ class Debug extends React.Component{
             }
         })
         return <div id='debug_panel'>
-            <link rel='stylesheet' href='/stylesheets/debug/debug.css' />
-            <link rel='stylesheet' href='/stylesheets/debug/toggle.css' />
-            <link rel='stylesheet' href='/stylesheets/debug/custom.css' />
+            <link rel='stylesheet' href='/stylesheets/debug.css' />
+            <link rel='stylesheet' href='/stylesheets/toggle.css' />
+            <link rel='stylesheet' href='/stylesheets/custom.css' />
 
             <div id='debugMain' className='main toggle body'>
                 <div id='littleMenu'></div>
@@ -52,7 +47,7 @@ class Debug extends React.Component{
     }
 
 	componentDidMount() {
-        debugPanel.then(json => this.setState({...json}))
+        config.then(json => this.setState({...json}))
 	}
 
 
@@ -61,6 +56,6 @@ class Debug extends React.Component{
 /** Mounts the app to the context */
 
 ReactDOM.render(
-	<Debug/>,
-	document.querySelector('#debug')
+	<RootPanel/>,
+	document.querySelector('#Root')
   );

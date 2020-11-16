@@ -1,0 +1,37 @@
+.custom
+    &>.title
+        display: block
+
+    &.group
+        padding: .2em
+        background-color: lightgray
+        margin: 0.2em auto
+    &.field
+        padding: .5em
+        margin: .2em
+        background-color: grey
+    &.color
+        .palet
+            display: flex
+            flex-wrap: wrap
+            flex-direction: row
+            justify-content: flex-start
+            padding: 0.5px
+            background-color: white
+            .color
+                min-width: 15px
+                min-height: 15px
+                margin: auto
+                border: solid black 2px
+                position: relative
+                &.active
+                    border: solid blue 3px
+
+                &>*
+                    position: absolute
+                    width: 100%
+                    height: 100%
+
+
+        .input
+            display: block

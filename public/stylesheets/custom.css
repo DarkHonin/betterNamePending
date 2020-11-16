@@ -1,0 +1,39 @@
+.custom > .title {
+  display: block;
+}
+.custom.group {
+  padding: 0.2em;
+  background-color: lightgray;
+  margin: 0.2em auto;
+}
+.custom.field {
+  padding: 0.5em;
+  margin: 0.2em;
+  background-color: grey;
+}
+.custom.color .palet {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0.5px;
+  background-color: white;
+}
+.custom.color .palet .color {
+  min-width: 15px;
+  min-height: 15px;
+  margin: auto;
+  border: solid black 2px;
+  position: relative;
+}
+.custom.color .palet .color.active {
+  border: solid blue 3px;
+}
+.custom.color .palet .color > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.custom.color .input {
+  display: block;
+}

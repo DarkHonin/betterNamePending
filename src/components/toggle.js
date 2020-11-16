@@ -6,7 +6,6 @@ class Toggle extends React.Component{
     }
 
     toggle(){
-        
         document.getElementById(this.props.target).classList.toggle('open')
     }
 
